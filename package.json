@@ -1,0 +1,22 @@
+{
+  "name": "wp-angular",
+  "version": "0.0.1",
+  "keywords": [
+		"presentation",
+    "web-presenter",
+    "web-presenter-angular",
+    "wp-angular",
+		"angular",
+		"library"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://www.github.com/akgurjar/wp-angular.git"
+	},
+	"author": "Ashish Gurjar <akp51081@gmail.com>",
+	"license": "GPL-3.0",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  }
+}
