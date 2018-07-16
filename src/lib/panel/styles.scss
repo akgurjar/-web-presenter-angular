@@ -1,0 +1,49 @@
+$icon-color: rgba(#000, .4);
+$icon-color-disabled: rgba(#000, .15);
+
+:host {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    pointer-events: none;
+}
+
+.wp-panel {
+    height: 42px;
+    margin: 10px 0px;
+    padding: 0px 7px;
+    border-radius: 3px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 4px rgba(#000, .2);
+    pointer-events: all;
+    transition: transform .4s ease-in-out;
+    transform: translate(0px, -60px);
+}
+.wp-panel--show {
+    transform: translate(0px, 0px);
+}
+.wp-content--center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.wp-icons-separator {
+    width: 1px;
+    height: 32px;
+    margin: 0px 5px;
+    background-color: rgba(#000, .15);
+}
+.wp-panel-icon>path {
+    stroke: $icon-color;
+    stroke-width: 2px;
+    fill: none;
+    transition: all .5s ease-in-out;
+}
+button:disabled {
+    .wp-panel-icon>path {
+        stroke: $icon-color-disabled;
+    }
+}
+

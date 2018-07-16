@@ -1,0 +1,59 @@
+
+:host {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    height: 32px;
+    width: 32px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-tap-highlight-color: none;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 16px;
+    background-color: transparent;
+    &:focus,
+    &:active {
+        border: none;
+        outline: none;
+    }
+    &::-moz-focus-inner {
+        border: none;
+    }
+    &:disabled {
+        cursor: default;
+    }
+}
+.wp-ripple {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: 50%;
+    span {
+        display: block;
+        height: 2px;
+        width: 2px;
+        position: absolute;
+        background-color: rgba(#000, .07);
+        transform-origin: center;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: all 400ms ease-in-out;
+        opacity: 1;
+    }
+}

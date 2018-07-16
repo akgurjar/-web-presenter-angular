@@ -2,6 +2,5 @@
  * Public API Surface of wp-angular
  */
 
-export * from './lib/wp-angular.service';
-export * from './lib/wp-angular.component';
-export * from './lib/wp-angular.module';
+export * from './lib/wp-module';
+export * from './lib/dialog/dialog';

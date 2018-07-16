@@ -1,0 +1,49 @@
+<div class="wp-panel wp-content--center" [ngClass]="{'wp-panel--show': isPanelVisible}">
+    <!-- screen mode icon -->
+    <button wp-button (click)="onPanelEvent('SCREEN', !isFullScreenMode)">
+        <svg viewBox="0 0 32 32" class="wp-panel-icon">
+            <path d="M8,14 h6 v-6 m4,0 v6 h6 m0,4 h-6 v6 m-4,0 v-6 h-6" *ngIf="isFullScreenMode"/>
+            <path d="M8,14 v-6 h6 m4,0 h6 v6 m0,4 v6 h-6 m-4,0 h-6 v-6" *ngIf="!isFullScreenMode"/>
+        </svg>
+    </button>
+    <div class="wp-icons-separator"></div>
+    <!-- left page icon -->
+    <button wp-button (click)="onPanelEvent('PAGE', null, 'PREVIOUS')" [disabled]="!hasPreviousPage">
+        <svg viewBox="0 0 32 32" class="wp-panel-icon">
+            <path d="M20,8 l-8,8 l8,8" />
+        </svg>
+    </button>
+    <!-- left step icon -->
+    <button wp-button (click)="onPanelEvent('STEP', null, 'PREVIOUS')" [disabled]="!hasPreviousStep">
+        <svg viewBox="0 0 32 32" class="wp-panel-icon">
+            <path d="M21,8 l-8,8 l8,8 m-10,0 v-16" />
+        </svg>
+    </button>
+    <!-- presentation mode icon -->
+    <button wp-button (click)="onPanelEvent('MODE', !isPresentationMode)" [disabled]="isPresentationMode">
+        <svg viewBox="0 0 32 32" class="wp-panel-icon">
+            <path d="M9,8 h14 a2,2 0 0 1 2,2 v8 a2,2 0 0 1 -2,2 h-14 a2,2 0 0 1 -2,-2 v-8 a2,2 0 0 1 2,-2z M15,20 v4 M17,20 v4 M11,24 h10" />
+            <path d="M15,12 v4 l3,-2 l-3,-2z"/>
+        </svg>
+    </button>
+    <!-- right step icon -->
+    <button wp-button (click)="onPanelEvent('STEP', null, 'NEXT')" [disabled]="!hasNextStep">
+        <svg viewBox="0 0 32 32" class="wp-panel-icon">
+            <path d="M11,8 l8,8 l-8,8 m10,0 v-16" />
+        </svg>
+    </button>
+    <!-- right page icon -->
+    <button wp-button (click)="onPanelEvent('PAGE', null, 'NEXT')" [disabled]="!hasNextPage">
+        <svg viewBox="0 0 32 32" class="wp-panel-icon">
+            <path d="M12,8 l8,8 l-8,8" />
+        </svg>
+    </button>
+    <div class="wp-icons-separator"></div>
+    <!-- hide panel icon -->
+    <button wp-button (click)="onPanelEvent('CLOSE', !isPanelVisible)">
+        <svg viewBox="0 0 32 32" class="wp-panel-icon">
+            <path d="M8,8 l16,16 m0,-16 l-16,16" />
+        </svg>
+    </button>
+</div>
+
